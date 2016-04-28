@@ -1,0 +1,17 @@
+{
+  "name": "drupal custom module toolkit",
+  "version": "1.0.0",
+  "description": "This directory structure contains the settings and configuration files specific to your site or sites and is an integral part of multisite configuration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.5.2"
+  }
+}
