@@ -9,7 +9,15 @@ _This gulp setup is meant to help with the construction of custom modules (in th
 ### Setup
 1. Copy and place the `gulpfile.js`, `package.json`, and `.gitignore` files in the `./sites/` directory of your drupal 7 project.
 2. From the same directory (`./sites/`), run `npm install`
-3. To launch the watchers, run `gulp`
+
+### Launching gulp (starting the watch)
+1. Navigate to the `./sites` directory of your project
+2. Run the command `gulp`
+
+**Note**: Your drupal site needs to be up and running for this to work (for Epicodus students, this means MAMP is pointed at your project and running the Apache and MySql servers).
+
+### Questions
+If you have any questions, suggestions, or comments, feel free to get a hold of me at `joseph.karasek@gmail.com`.
 
 ### Limitations/bugs
 _This has not been thoroughly tested. There may be unexpected bugs. Do note that this gulp setup only watches for changes to files ending in `.module` that are located in the `./sites/all/modules/` folder. You will need to place your custom modules in this directory (subfolders should be okay) or change the `gulpfile.js` to watch for changes in a different directory._
