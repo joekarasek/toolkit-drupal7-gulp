@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync').create();
+var config = require('./gulpconfig.json');
 
 
 // Tasks to run on custom module update
@@ -18,7 +19,7 @@ gulp.task('drushClear', shell.task([
 
 // Watchers
 gulp.task('module:watch', function() {
-  gulp.watch('./all/modules/**/*.module', ['refreshBrowser']);
+  gulp.watch(config.modules, ['refreshBrowser']);
 });
 
 
@@ -29,7 +30,7 @@ gulp.task('default', function() {
     //   baseDir: "./",
     //   index: "index.html"
     // }
-    proxy: "localhost:8888",
+    proxy: config.proxyUrl,
     port: 8889
   });
   gulp.start('module:watch');

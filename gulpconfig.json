@@ -1,0 +1,7 @@
+{
+  "modules": [
+    "./all/modules/**/*.module",
+    "./all/modules/**/*.inc"
+  ],
+  "proxyUrl": "localhost:8888"
+}
