@@ -11,17 +11,18 @@ var config = require('./gulpconfig.json');
 
 //////////////////////////// Drush Commands //////////////////////////
 
-gulp.task('drushCacheClear', function() {
-  shell.task([ 'drush cc all' ]);
-  browserSync.reload();
-});
+gulp.task('drushCacheClear',
+  shell.task([ 'drush cc all' ])
+);
 
 
 
 ////////////////////////////// Watchers ////////////////////////////
 
 gulp.task('module:watch', function() {
-  gulp.watch(config.modules, ['drushCacheClear']);
+  gulp.watch(config.modules, ['drushCacheClear'], function(){
+    browserSync.reload();
+  });
 });
 
 
