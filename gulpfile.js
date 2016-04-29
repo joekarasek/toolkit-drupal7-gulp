@@ -1,37 +1,41 @@
-'use strict';
+'use strict';  // Why use strict mode? See http://www.w3schools.com/js/js_strict.asp
 
-// Dependencies
+////////////////////// Variables and Dependencies ////////////////////
+
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync').create();
 var config = require('./gulpconfig.json');
 
 
-// Tasks to run on custom module update
-gulp.task('refreshBrowser', ['drushClear'], function(){
+
+//////////////////////////// Drush Commands //////////////////////////
+
+gulp.task('drushCacheClear', function() {
+  shell.task([ 'drush cc all' ]);
   browserSync.reload();
 });
 
-gulp.task('drushClear', shell.task([
-  'drush cc all'
-]));
 
 
-// Watchers
+////////////////////////////// Watchers ////////////////////////////
+
 gulp.task('module:watch', function() {
-  gulp.watch(config.modules, ['refreshBrowser']);
+  gulp.watch(config.modules, ['drushCacheClear']);
 });
 
 
-// Default behavior, sets up browserSync
+
+////////////////////// Default: Serve and Watch ////////////////////
+
 gulp.task('default', function() {
+
+  // Initiate browserSync
   browserSync.init({
-    // server: {
-    //   baseDir: "./",
-    //   index: "index.html"
-    // }
     proxy: config.proxyUrl,
     port: 8889
   });
+
+  // Start Watchers
   gulp.start('module:watch');
 });

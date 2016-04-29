@@ -1,17 +1,20 @@
-# Gulp Tasks for Drupal 7 Custom Module Building
-## By _**Joe Karasek**, 4/27/16_
----
+# Gulp for Drupal 7
+#### By _**Joe Karasek**, 4/27/16_
+
 ### Description
+
+_A gulp build to help with drupal 7 development._
+
+_Launches the site through browserSync, site reloads to stay synced with latest changes to custom modules._
+
 _**Please star this repo if you find it useful, thanks.**_
-_Tired of `drush cc all` followed by clicking browser refresh? This will automate the process so you can get back to editing code and seeing the changes right away._
-_This gulp setup is meant to help with the construction of custom modules (in the Epicodus Drupal course)._
 
 ### Setup
 1. Copy and place the `gulpfile.js`, `gulpconfig.json`, `package.json`, and `.gitignore` files in the `./sites/` directory of your drupal 7 project.
 2. From the same directory (`./sites/`), run `npm install`.
 3. Update `gulpconfig.json` if needed.
   - Change or add any files paths you want to watch for changes that will trigger a cache clear and reload.
-  - Set the port of the proxyUrl. This is currently set to localhost:8888 to match the Drupal 7 setup instructions from (Learn How To Program)[https://www.learnhowtoprogram.com/]
+  - Set the port of the proxyUrl. This is currently set to localhost:8888 to match the Drupal 7 setup instructions from [Learn How to Program](https://www.learnhowtoprogram.com/) and [Team Treehouse](https://teamtreehouse.com/home).
 
 ### Launching gulp (starting the watch)
 1. Navigate to the `./sites` directory of your project
@@ -20,10 +23,7 @@ _This gulp setup is meant to help with the construction of custom modules (in th
 **Note**: Your drupal site needs to be up and running for this to work (for Epicodus students, this means MAMP is pointed at your project and running the Apache and MySql servers).
 
 ### Questions
-If you have any questions, suggestions, or comments, feel free to get a hold of me at `joseph.karasek@gmail.com`.
-
-### Limitations/bugs
-_This has not been thoroughly tested. There may be unexpected bugs. Do note that this gulp setup only watches for changes to files ending in `.module` that are located in the `./sites/all/modules/` folder. You will need to place your custom modules in this directory (subfolders should be okay) or change the `gulpfile.js` to watch for changes in a different directory._
+If you have any questions, suggestions, or comments, feel free to get a hold of me at `joseph.karasek@gmail.com`. Or make a pull request!
 
 ### License
 MIT 2016, Joe Karasek
