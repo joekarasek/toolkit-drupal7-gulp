@@ -7,8 +7,9 @@ _Tired of `drush cc all` followed by clicking browser refresh? This will automat
 _This gulp setup is meant to help with the construction of custom modules (in the Epicodus Drupal course)._
 
 ### Setup
-1. Copy and place the `gulpfile.js`, `package.json`, and `.gitignore` files in the `./sites/` directory of your drupal 7 project.
-2. From the same directory (`./sites/`), run `npm install`
+1. Copy and place the `gulpfile.js`, `gulpconfig.json`, `package.json`, and `.gitignore` files in the `./sites/` directory of your drupal 7 project.
+2. From the same directory (`./sites/`), run `npm install`.
+3. Open `gulpconfig.json` and change or add any files paths you want to watch for changes that will trigger a cache clear and reload.
 
 ### Launching gulp (starting the watch)
 1. Navigate to the `./sites` directory of your project
