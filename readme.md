@@ -9,7 +9,9 @@ _This gulp setup is meant to help with the construction of custom modules (in th
 ### Setup
 1. Copy and place the `gulpfile.js`, `gulpconfig.json`, `package.json`, and `.gitignore` files in the `./sites/` directory of your drupal 7 project.
 2. From the same directory (`./sites/`), run `npm install`.
-3. Open `gulpconfig.json` and change or add any files paths you want to watch for changes that will trigger a cache clear and reload.
+3. Update `gulpconfig.json` if needed.
+  - Change or add any files paths you want to watch for changes that will trigger a cache clear and reload.
+  - Set the port of the proxyUrl. This is currently set to localhost:8888 to match the Drupal 7 setup instructions from (Learn How To Program)[https://www.learnhowtoprogram.com/]
 
 ### Launching gulp (starting the watch)
 1. Navigate to the `./sites` directory of your project
