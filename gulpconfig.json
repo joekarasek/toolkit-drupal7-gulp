@@ -3,5 +3,17 @@
     "./all/modules/**/*.module",
     "./all/modules/**/*.info"
   ],
+  "currentTheme": [
+    "./all/themes/elephant"
+  ],
+  "themes": [
+    "./all/themes/**/*.info",
+    "./all/themes/**/*.tpl.php",
+    "./all/themes/**/*.tpl.php",
+    "./all/themes/**/*.css"
+  ],
+  "stylesheets": [
+    "./all/themes/**/scss/**/*.scss"
+  ],
   "proxyUrl": "localhost:8888"
 }
