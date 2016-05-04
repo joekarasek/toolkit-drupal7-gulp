@@ -5,7 +5,7 @@
 
 _A gulp build to help with drupal 7 development._
 
-_Launches the site through browserSync, site reloads to stay synced with latest changes to custom modules._
+_Launches the site through browserSync, watches for changes to custom modules and theme. Handles clearing the cache, reloading the page, and all sass/scss tasks for a custom theme._
 
 _**Please star this repo if you find it useful, thanks.**_
 
@@ -20,7 +20,9 @@ _**Please star this repo if you find it useful, thanks.**_
 
 1. Copy and place the `gulpfile.js`, `gulpconfig.json`, `package.json`, and `.gitignore` files in the `./sites` directory of your drupal 7 project.
 2. From `./sites`, run `npm install`.
-3. Update `gulpconfig.json` if needed.
+3. Update `gulpconfig.json`.
+  - Add the directory of your current custom theme under `"currentTheme"`.
+    - **Note**: Place your `.sass` and `.scss` files in a directory call `scss` within your custom theme. You will have issues with this setup if you are not using scss and do not have that file present. 
   - Change or add any files paths you want to watch for changes that will trigger a cache clear and reload.
   - Set the port of the proxyUrl. This is currently set to localhost:8888 to match the Drupal 7 setup instructions from [Learn How to Program](https://www.learnhowtoprogram.com/) and [Team Treehouse](https://teamtreehouse.com/home).
 
